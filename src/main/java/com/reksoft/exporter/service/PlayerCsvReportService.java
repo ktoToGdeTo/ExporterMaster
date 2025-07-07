@@ -24,10 +24,10 @@ public class PlayerCsvReportService {
 
         File file = new File(filePath);
         try (PrintWriter writer = new PrintWriter(new FileWriter(file))) {
-            writer.println("ID, Combined Name, Nickname, Country, Team Name, Full Name");
+            writer.println("ID; Combined Name; Nickname; Country; Team Name; Full Name");
 
             for (Player player : players) {
-                String line = String.join(", ",
+                String line = String.join("; ",
                         String.valueOf(player.getId()),
                         player.getCombinedName(),
                         player.getNickname(),
