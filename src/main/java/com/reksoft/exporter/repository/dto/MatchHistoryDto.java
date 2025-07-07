@@ -3,6 +3,7 @@ package com.reksoft.exporter.repository.dto;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @Data
 public class MatchHistoryDto {
@@ -10,8 +11,8 @@ public class MatchHistoryDto {
     private Integer winnerId;
     private Integer loserId;
     private Integer tournamentId;
-    private LocalDateTime date;
-    private TeamDto winner;
-    private TeamDto loser;
+    private OffsetDateTime date;
+    private String winner;
+    private String loser;
     private TournamentDto tournament;
 }
